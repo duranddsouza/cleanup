@@ -1,11 +1,11 @@
-Requirements to run
+Requirements to run:
     Java 8
     mvn
 
-To build and run test
+To build and run test:
     mvn clean install
 
-To start app
+To start app:
      mvn spring-boot:run
 
 App will run on port 8080, can be changed in application.properties
