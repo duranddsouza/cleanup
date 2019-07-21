@@ -133,6 +133,7 @@ public class CleanupTest {
 
 		HttpEntity<CleanupDto> entity = new HttpEntity<>(dto, headers);
 		ResponseEntity<ErrorDto> response = testRestTemplate.exchange(createURLWithPort("/cleanup"), HttpMethod.POST, entity, ErrorDto.class);
+		Assert.assertTrue(response.getStatusCode().value() == 400);
 		Assert.assertTrue(response.getBody().getError().contains("Can't move cleaner outside area"));
 	}
 
